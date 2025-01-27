@@ -1,16 +1,3 @@
-import os
-import subprocess
-
-# Garantir instalação de dependências ausentes
-REQUIRED_LIBRARIES = ["seaborn", "matplotlib", "pillow", "openpyxl", "xlsxwriter"]
-
-for lib in REQUIRED_LIBRARIES:
-    try:
-        __import__(lib)
-    except ModuleNotFoundError:
-        subprocess.check_call([os.sys.executable, "-m", "pip", "install", lib])
-
-# Imports necessários
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
